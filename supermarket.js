@@ -2,32 +2,32 @@
    'use strict';
     var product_id;
     
-//     //Show shaved data from json
-//     var arrayText = localStorage.getItem("arrayJSON");
-//     var obj = JSON.parse(arrayText);
+    //Show shaved data from json
+    var arrayText = localStorage.getItem("arrayJSON");
+    var obj = JSON.parse(arrayText);
     
-//     var arrayLength = obj.length;
-//     var table = document.getElementById('products');
-//     var rowLenght = table.rows.length;
+    var arrayLength = obj.length;
+    var table = document.getElementById('products');
+    var rowLenght = table.rows.length;
 
     
-//     for (var i = 1; i < arrayLength; i++) {
-//         var cellId = 'cell1'+ i;
-//         var row = table.insertRow(i);
-//         var cell1 = row.insertCell(0);
-//         var cell2 = row.insertCell(1);
+    for (var i = 1; i < arrayLength; i++) {
+        var cellId = 'cell1'+ i;
+        var row = table.insertRow(i);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
         
-//         cell1.id = 'cell1'+i;
-//         cell2.id = 'cell2'+i;
-//         row.id = 'row'+i;
-//         row.title="Κάνε κλικ στο προϊόν για επεξεργασία."
+        cell1.id = 'cell1'+i;
+        cell2.id = 'cell2'+i;
+        row.id = 'row'+i;
+        row.title="Κάνε κλικ στο προϊόν για επεξεργασία."
 
-//         var productName = document.createTextNode(obj[i][0]);
-//         var productPrice = document.createTextNode(obj[i][1]);
-//         cell1.appendChild(productName); 
-//         cell2.appendChild(productPrice);
-//         cell1.addEventListener('click', handleEvent);
-//     }
+        var productName = document.createTextNode(obj[i][0]);
+        var productPrice = document.createTextNode(obj[i][1]);
+        cell1.appendChild(productName); 
+        cell2.appendChild(productPrice);
+        cell1.addEventListener('click', handleEvent);
+    }
     
     //add a new product
     document.getElementById('newProduct').addEventListener('click', function () {
