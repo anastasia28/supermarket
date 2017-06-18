@@ -54,15 +54,15 @@
         document.getElementById('newProductModal').style.display="none";
         document.getElementById("insert").value = "";
                 
-        //write into json
-        var array = new Array(rowLenght);
-        for (var i = 0; i < rowLenght; i++) {
-          array[i] = new Array(2);
-        }
-        for (var i = 1; i < rowLenght; i++) {
-            array[i][0] = table.rows[i].cells[0].textContent;
-            array[i][1] = table.rows[i].cells[1].textContent;
-        }
+//         //write into json
+//         var array = new Array(rowLenght);
+//         for (var i = 0; i < rowLenght; i++) {
+//           array[i] = new Array(2);
+//         }
+//         for (var i = 1; i < rowLenght; i++) {
+//             array[i][0] = table.rows[i].cells[0].textContent;
+//             array[i][1] = table.rows[i].cells[1].textContent;
+//         }
 
 //         var arrayJSON = JSON.stringify(array);
 //         localStorage.setItem("arrayJSON", arrayJSON);        
@@ -104,17 +104,17 @@
 
         nextCell.innerHTML = text.textContent;
               
-       //write into json
-        var table = document.getElementById('products');
-        var rowLenght = table.rows.length;    
-        var array = new Array(rowLenght);
-        for (var i = 0; i < rowLenght; i++) {
-          array[i] = new Array(2);
-        }
-        for (var i = 1; i < rowLenght; i++) {
-            array[i][0] = table.rows[i].cells[0].textContent;
-            array[i][1] = table.rows[i].cells[1].textContent;
-        }
+//        //write into json
+//         var table = document.getElementById('products');
+//         var rowLenght = table.rows.length;    
+//         var array = new Array(rowLenght);
+//         for (var i = 0; i < rowLenght; i++) {
+//           array[i] = new Array(2);
+//         }
+//         for (var i = 1; i < rowLenght; i++) {
+//             array[i][0] = table.rows[i].cells[0].textContent;
+//             array[i][1] = table.rows[i].cells[1].textContent;
+//         }
 //         var arrayJSON = JSON.stringify(array);
 //         localStorage.setItem("arrayJSON", arrayJSON);
 
@@ -144,17 +144,17 @@
         
         el.innerHTML = text.textContent;
         
-       //write into json
-        var table = document.getElementById('products');
-        var rowLenght = table.rows.length; 
-        var array = new Array(rowLenght);
-        for (var i = 0; i < rowLenght; i++) {
-          array[i] = new Array(2);
-        }
-        for (var i = 1; i < rowLenght; i++) {
-            array[i][0] = table.rows[i].cells[0].textContent;
-            array[i][1] = table.rows[i].cells[1].textContent;
-        }
+//        //write into json
+//         var table = document.getElementById('products');
+//         var rowLenght = table.rows.length; 
+//         var array = new Array(rowLenght);
+//         for (var i = 0; i < rowLenght; i++) {
+//           array[i] = new Array(2);
+//         }
+//         for (var i = 1; i < rowLenght; i++) {
+//             array[i][0] = table.rows[i].cells[0].textContent;
+//             array[i][1] = table.rows[i].cells[1].textContent;
+//         }
 //         var arrayJSON = JSON.stringify(array);
 //         localStorage.setItem("arrayJSON", arrayJSON);
 
