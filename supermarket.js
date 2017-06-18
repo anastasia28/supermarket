@@ -2,32 +2,34 @@
    'use strict';
     var product_id;
     
-//     //Show shaved data from json
-//     var arrayText = localStorage.getItem("arrayJSON");
-//     var obj = JSON.parse(arrayText);
+    window.onload = function jsonStorage() {
+    //Show shaved data from json
+    var arrayText = localStorage.getItem("arrayJSON");
+    var obj = JSON.parse(arrayText);
     
-//     var arrayLength = obj.length;
-//     var table = document.getElementById('products');
-//     var rowLenght = table.rows.length;
+    var arrayLength = obj.length;
+    var table = document.getElementById('products');
+    var rowLenght = table.rows.length;
 
     
-//     for (var i = 1; i < arrayLength; i++) {
-//         var cellId = 'cell1'+ i;
-//         var row = table.insertRow(i);
-//         var cell1 = row.insertCell(0);
-//         var cell2 = row.insertCell(1);
+    for (var i = 1; i < arrayLength; i++) {
+        var cellId = 'cell1'+ i;
+        var row = table.insertRow(i);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
         
-//         cell1.id = 'cell1'+i;
-//         cell2.id = 'cell2'+i;
-//         row.id = 'row'+i;
-//         row.title="Κάνε κλικ στο προϊόν για επεξεργασία."
+        cell1.id = 'cell1'+i;
+        cell2.id = 'cell2'+i;
+        row.id = 'row'+i;
+        row.title="Κάνε κλικ στο προϊόν για επεξεργασία."
 
-//         var productName = document.createTextNode(obj[i][0]);
-//         var productPrice = document.createTextNode(obj[i][1]);
-//         cell1.appendChild(productName); 
-//         cell2.appendChild(productPrice);
-//         cell1.addEventListener('click', handleEvent);
-//     }
+        var productName = document.createTextNode(obj[i][0]);
+        var productPrice = document.createTextNode(obj[i][1]);
+        cell1.appendChild(productName); 
+        cell2.appendChild(productPrice);
+        cell1.addEventListener('click', handleEvent);
+    }
+    }
     
     //add a new product
     document.getElementById('newProduct').addEventListener('click', function () {
@@ -54,18 +56,18 @@
         document.getElementById('newProductModal').style.display="none";
         document.getElementById("insert").value = "";
                 
-//         //write into json
-//         var array = new Array(rowLenght);
-//         for (var i = 0; i < rowLenght; i++) {
-//           array[i] = new Array(2);
-//         }
-//         for (var i = 1; i < rowLenght; i++) {
-//             array[i][0] = table.rows[i].cells[0].textContent;
-//             array[i][1] = table.rows[i].cells[1].textContent;
-//         }
+        //write into json
+        var array = new Array(rowLenght);
+        for (var i = 0; i < rowLenght; i++) {
+          array[i] = new Array(2);
+        }
+        for (var i = 1; i < rowLenght; i++) {
+            array[i][0] = table.rows[i].cells[0].textContent;
+            array[i][1] = table.rows[i].cells[1].textContent;
+        }
 
-//         var arrayJSON = JSON.stringify(array);
-//         localStorage.setItem("arrayJSON", arrayJSON);        
+        var arrayJSON = JSON.stringify(array);
+        localStorage.setItem("arrayJSON", arrayJSON);        
         
         
     });
@@ -104,19 +106,19 @@
 
         nextCell.innerHTML = text.textContent;
               
-//        //write into json
-//         var table = document.getElementById('products');
-//         var rowLenght = table.rows.length;    
-//         var array = new Array(rowLenght);
-//         for (var i = 0; i < rowLenght; i++) {
-//           array[i] = new Array(2);
-//         }
-//         for (var i = 1; i < rowLenght; i++) {
-//             array[i][0] = table.rows[i].cells[0].textContent;
-//             array[i][1] = table.rows[i].cells[1].textContent;
-//         }
-//         var arrayJSON = JSON.stringify(array);
-//         localStorage.setItem("arrayJSON", arrayJSON);
+       //write into json
+        var table = document.getElementById('products');
+        var rowLenght = table.rows.length;    
+        var array = new Array(rowLenght);
+        for (var i = 0; i < rowLenght; i++) {
+          array[i] = new Array(2);
+        }
+        for (var i = 1; i < rowLenght; i++) {
+            array[i][0] = table.rows[i].cells[0].textContent;
+            array[i][1] = table.rows[i].cells[1].textContent;
+        }
+        var arrayJSON = JSON.stringify(array);
+        localStorage.setItem("arrayJSON", arrayJSON);
 
         document.getElementById('insertPriceModal').style.display="none";
         document.getElementById('currentProductModal').style.display="none";
@@ -144,19 +146,19 @@
         
         el.innerHTML = text.textContent;
         
-//        //write into json
-//         var table = document.getElementById('products');
-//         var rowLenght = table.rows.length; 
-//         var array = new Array(rowLenght);
-//         for (var i = 0; i < rowLenght; i++) {
-//           array[i] = new Array(2);
-//         }
-//         for (var i = 1; i < rowLenght; i++) {
-//             array[i][0] = table.rows[i].cells[0].textContent;
-//             array[i][1] = table.rows[i].cells[1].textContent;
-//         }
-//         var arrayJSON = JSON.stringify(array);
-//         localStorage.setItem("arrayJSON", arrayJSON);
+       //write into json
+        var table = document.getElementById('products');
+        var rowLenght = table.rows.length; 
+        var array = new Array(rowLenght);
+        for (var i = 0; i < rowLenght; i++) {
+          array[i] = new Array(2);
+        }
+        for (var i = 1; i < rowLenght; i++) {
+            array[i][0] = table.rows[i].cells[0].textContent;
+            array[i][1] = table.rows[i].cells[1].textContent;
+        }
+        var arrayJSON = JSON.stringify(array);
+        localStorage.setItem("arrayJSON", arrayJSON);
 
         document.getElementById('editProductModal').style.display="none";
         document.getElementById('currentProductModal').style.display="none";
@@ -208,8 +210,8 @@
             nextCell.parentNode.removeChild(nextCell);
             row.parentNode.removeChild(row);
         }
-//         var arrayJSON = JSON.stringify("");
-//         localStorage.setItem("arrayJSON", arrayJSON);
+        var arrayJSON = JSON.stringify("");
+        localStorage.setItem("arrayJSON", arrayJSON);
     });
     
     //calculate the sum of the prices
