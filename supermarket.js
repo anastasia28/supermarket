@@ -64,8 +64,8 @@
             array[i][1] = table.rows[i].cells[1].textContent;
         }
 
-        var arrayJSON = JSON.stringify(array);
-        localStorage.setItem("arrayJSON", arrayJSON);        
+//         var arrayJSON = JSON.stringify(array);
+//         localStorage.setItem("arrayJSON", arrayJSON);        
         
         
     });
@@ -115,8 +115,8 @@
             array[i][0] = table.rows[i].cells[0].textContent;
             array[i][1] = table.rows[i].cells[1].textContent;
         }
-        var arrayJSON = JSON.stringify(array);
-        localStorage.setItem("arrayJSON", arrayJSON);
+//         var arrayJSON = JSON.stringify(array);
+//         localStorage.setItem("arrayJSON", arrayJSON);
 
         document.getElementById('insertPriceModal').style.display="none";
         document.getElementById('currentProductModal').style.display="none";
@@ -155,8 +155,8 @@
             array[i][0] = table.rows[i].cells[0].textContent;
             array[i][1] = table.rows[i].cells[1].textContent;
         }
-        var arrayJSON = JSON.stringify(array);
-        localStorage.setItem("arrayJSON", arrayJSON);
+//         var arrayJSON = JSON.stringify(array);
+//         localStorage.setItem("arrayJSON", arrayJSON);
 
         document.getElementById('editProductModal').style.display="none";
         document.getElementById('currentProductModal').style.display="none";
@@ -208,8 +208,8 @@
             nextCell.parentNode.removeChild(nextCell);
             row.parentNode.removeChild(row);
         }
-        var arrayJSON = JSON.stringify("");
-        localStorage.setItem("arrayJSON", arrayJSON);
+//         var arrayJSON = JSON.stringify("");
+//         localStorage.setItem("arrayJSON", arrayJSON);
     });
     
     //calculate the sum of the prices
